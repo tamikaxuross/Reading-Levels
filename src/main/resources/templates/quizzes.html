@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script src="/js/scripts.js" defer></script>
 </head>
 <body>
-
+<h1>Quiz</h1>
+<div id="question-container">
+    <p id="question-text"></p>
+    <div id="options-container"></div>
+</div>
+<div>
+    <button id="prev-btn" onclick="prevQuestion()">Previous</button>
+    <button id="next-btn" onclick="nextQuestion()">Next</button>
+</div>
 </body>
 </html>
+
+
