@@ -1,10 +1,35 @@
 package org.tamikaross.quizassessment.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.tamikaross.quizassessment.models.Quiz;
+import org.tamikaross.quizassessment.repositories.QuizRepository;
 
+import java.util.List;
+import java.util.Optional;
+
+@Service
 public class QuizService {
-    public Quiz getQuizById(Long quizId) {
-        return null;
+    @Autowired
+    private QuizRepository quizRepository;
+
+    public List<Quiz> getAllQuizzes() {
+        return quizRepository.findAll();
+    }
+
+    public Optional<Quiz> getQuizById(Long id) {
+        return quizRepository.findById(id);
+    }
+
+    public Quiz saveQuiz(Quiz quiz) {
+        return quizRepository.save(quiz);
+    }
+
+    public void deleteQuiz(Long id) {
+        quizRepository.deleteById(id);
+    }
+
+    public List<Quiz> searchQuizzes(String title) {
+        return quizRepository.findByTitleContaining(title);
     }
 }
-
