@@ -1,6 +1,5 @@
 package org.tamikaross.quizassessment.config;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,14 +16,14 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .csrf(AbstractHttpConfigurer::disable)  // Disable CSRF for simplicity, but be cautious in production
+                .csrf(AbstractHttpConfigurer::disable)  // Disable CSRF using the new method
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/register", "/login", "/css/**", "/js/**", "/images/**").permitAll()  // Allow access to registration, login, and static resources
-                        .anyRequest().authenticated()  // All other requests require authentication
+                        .requestMatchers("/register", "/login", "/css/**", "/js/**", "/images/**").permitAll()  // Permit these URLs without authentication
+                        .anyRequest().authenticated()  // Require authentication for any other request
                 )
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")  // Custom login page
-                        .defaultSuccessUrl("/quizzes", true)  // Redirect to quizzes page after login
+                        .defaultSuccessUrl("/quizzes", true)  // Redirect to quizzes page upon successful login
                         .permitAll()
                 )
                 .logout(logout -> logout

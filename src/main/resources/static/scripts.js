@@ -3,7 +3,7 @@ let quizData = null;
 
 // Function to fetch quiz data by quizId
 function fetchQuiz(quizId) {
-    fetch(`http://localhost:8080/api/quiz/${quizId}`)
+    fetch(`http://localhost:8082/api/quiz/${quizId}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -77,6 +77,6 @@ function prevQuestion() {
 
 // Initialize the quiz on page load
 document.addEventListener('DOMContentLoaded', () => {
-    const quizId = 1; // Replace with dynamic ID or get from URL parameters if needed
+    const quizId = 1;
     fetchQuiz(quizId);
 });

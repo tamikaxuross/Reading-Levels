@@ -108,3 +108,48 @@ footer {
     padding: 10px 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.welcome-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+
+.auth-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.auth-buttons .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.auth-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Layout for Image Columns */
+.image-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left-column, .right-column {
+    width: 45%;
+}
+
+.left-column img, .right-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
