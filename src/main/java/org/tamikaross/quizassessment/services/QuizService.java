@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class QuizService {
+
     @Autowired
     private QuizRepository quizRepository;
 
@@ -17,19 +18,15 @@ public class QuizService {
         return quizRepository.findAll();
     }
 
-    public Optional<Quiz> getQuizById(Long id) {
-        return quizRepository.findById(id);
+    public Optional<Quiz> getQuizById(Long quizId) {
+        return quizRepository.findById(quizId);
     }
 
     public Quiz saveQuiz(Quiz quiz) {
         return quizRepository.save(quiz);
     }
 
-    public void deleteQuiz(Long id) {
-        quizRepository.deleteById(id);
-    }
-
-    public List<Quiz> searchQuizzes(String title) {
-        return quizRepository.findByTitleContaining(title);
+    public void deleteQuiz(Long quizId) {
+        quizRepository.deleteById(quizId);
     }
 }

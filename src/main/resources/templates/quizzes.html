@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>Reading Levels Quiz</title>
     <link rel="stylesheet" href="/static/styles.css">
     <script src="/static/scripts.js" defer></script>
 </head>
 <body>
-<h1>Quiz</h1>
-<div id="question-container">
-    <p id="question-text"></p>
-    <div id="options-container"></div>
-</div>
-<div>
-    <button id="prev-btn" onclick="prevQuestion()">Previous</button>
-    <button id="next-btn" onclick="nextQuestion()">Next</button>
-</div>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/quiz">Take Quiz</a></li>
+            <li><a href="/results">Results</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="quiz-section">
+        <div id="question-container">
+            <p id="question-text"></p>
+            <div id="options-container"></div>
+        </div>
+        <div class="navigation-buttons">
+            <button id="prev-btn" onclick="prevQuestion()">Previous</button>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 QuizApp - Improve Your Reading Skills</p>
+</footer>
 </body>
 </html>
-
 

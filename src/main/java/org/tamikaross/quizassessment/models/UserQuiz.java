@@ -15,11 +15,11 @@ public class UserQuiz {
     private Long userQuizId;
 
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "user_Id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "quizId")
+    @JoinColumn(name = "quiz_Id")
     private Quiz quiz;
 
     private LocalDateTime startTime;
