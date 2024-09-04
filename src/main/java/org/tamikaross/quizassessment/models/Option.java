@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "quiz_option")
+@Table(name = "quizoption")
 public class Option {
 
     @Id
@@ -21,6 +21,6 @@ public class Option {
     private boolean isCorrect;
 
     @ManyToOne
-    @JoinColumn(name = "questionId")
+    @JoinColumn(name = "question_Id")
     private Question question;
 }
