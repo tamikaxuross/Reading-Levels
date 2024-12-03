@@ -1,5 +1,5 @@
 Overview
-The Quiz Assessment Application is a web-based platform designed to evaluate users' reading levels through interactive quizzes. The application features a dynamic interface where users can register, log in, and take quizzes that assess their reading comprehension, vocabulary, and overall language proficiency.
+The Reading Levels Application is a web-based platform designed to evaluate users' reading levels through interactive quizzes. The application features a dynamic interface where users can register, log in, and take quizzes that assess their reading comprehension, vocabulary, and overall language proficiency.
 
 Features
 User Authentication: Secure user registration and login system.
